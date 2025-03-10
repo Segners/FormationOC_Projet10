@@ -1,0 +1,119 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-03-10T21:25:42.272Z",
+    "end": "2025-03-10T21:25:44.549Z",
+    "duration": 2277,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d1c1d41e-b218-4859-b8a8-a29cde6e262d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\smoke_test\\smoke_test.cy.js",
+      "file": "cypress\\e2e\\smoke_test\\smoke_test.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d77fb1d3-abd3-4d70-9c98-076f74345935",
+          "title": "Smoke test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Présence des champs et boutons de connexion",
+              "fullTitle": "Smoke test Présence des champs et boutons de connexion",
+              "timedOut": null,
+              "duration": 544,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:8080/#/');\ncy.getBySel('nav-link-register').should('be.visible');\ncy.getBySel('nav-link-login').should('be.visible').click();\ncy.getBySel('login-input-username').should('be.visible');\ncy.getBySel('login-input-password').should('be.visible');\ncy.getBySel('login-submit').should('be.visible');",
+              "err": {},
+              "uuid": "6a84aa8b-957b-4573-88c8-8c820b8d87e8",
+              "parentUUID": "d77fb1d3-abd3-4d70-9c98-076f74345935",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Présence des boutons d'ajout au panier quand connecté et présence du champ de disponibilité du produit",
+              "fullTitle": "Smoke test Présence des boutons d'ajout au panier quand connecté et présence du champ de disponibilité du produit",
+              "timedOut": null,
+              "duration": 835,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:8080/#/login');\ncy.getBySel('login-input-username').type(username);\ncy.getBySel('login-input-password').type(password);\ncy.getBySel('login-submit').click();\ncy.visit('http://localhost:8080/#/products/3');\ncy.getBySel('detail-product-stock').should('be.visible');\ncy.getBySel('detail-product-price').should('be.visible');\ncy.getBySel('detail-product-quantity').should('be.visible');\ncy.getBySel('detail-product-add').should('be.visible').should('not.be.disabled'); // Anomalie, doit etre desactivé",
+              "err": {},
+              "uuid": "eb884906-462f-4636-955d-0227d8eeefd8",
+              "parentUUID": "d77fb1d3-abd3-4d70-9c98-076f74345935",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6a84aa8b-957b-4573-88c8-8c820b8d87e8",
+            "eb884906-462f-4636-955d-0227d8eeefd8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1379,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

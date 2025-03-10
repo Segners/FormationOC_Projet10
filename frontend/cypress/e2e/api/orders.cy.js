@@ -3,6 +3,7 @@ import { faker } from '@faker-js/faker'
 
 describe("API Orders Test", () => {
   let authToken;
+  let cartId;
   const apiUrl = "/orders";
   beforeEach(() => {
     cy.request({
@@ -68,22 +69,11 @@ describe("API Orders Test", () => {
 
     });
   });
-  let cartId;
 
-  it("Vide le panier", () => {
-    cy.request({
-      method: "DELETE",
-      url: `/orders/${cartId}/delete`,
-      headers: {
-        Authorization:`Bearer ${authToken}`,
-      },
-    }).then((response) => {
-      expect(response.status).to.be.eq(200);
-    });
-  });
+
 
  context(
-    "sAjoute un produit, change la quantité dans le panier et vide le panier",
+    "Ajoute un produit, change la quantité dans le panier et vide le panier",
     () => {
       const randomQuantity = faker.number.int({ min: 1, max: 10 });
       let productId;
