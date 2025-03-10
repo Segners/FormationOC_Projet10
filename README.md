@@ -4,13 +4,14 @@ Projet 10 de la formation de Testeur de logiciel.
 
 Mise en place de tests automatiques avec Cypress.
 
+Dans ce projet, ma mission est d'automatiser les tests fonctionnels pour le site web de l'entreprise Eco Bliss Bath, une start-up, spécialisée dans la vente de produits de beauté écoresponsables dont le produit principal est un savon solide. 
+
 # Table des matières 
 ||
 |-------|
 |📦 [Installation](#installation)|
 |🚀 [Utilisation](#utilisation)|
 |📄 ️[Génération des rapports](#génération-des-rapports)|
-| [Instructions](#instructions)
 ||
 ## Installation
 
