@@ -101,7 +101,7 @@ Les tests automatisés couvrent les fonctionnalités critiques de l'application 
       └── 📄 smoke_test.cy.js
  ```
 Cliquez sur un des tests pour l'exécuter :
-![alt text](image-1.png)
+![alt text](images/image-1.png)
  ## Rapports :
  ```bash 
 npx cypress run --reporter mochawesome
@@ -118,5 +118,5 @@ Les rapports de test permettent de :
 - Générer des statistiques de couverture
 
 **Exemple :**
-![alt text](image.png)
-![alt text](<Tests du panier -- Ne devrait pas changer le panier avec un nombre 20+ (failed).png>)
+![alt text](/images/image.png)
+![alt text](<images/Tests du panier.png>)
