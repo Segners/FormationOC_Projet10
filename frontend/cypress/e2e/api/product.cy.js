@@ -46,8 +46,6 @@ describe("Tests API avec authentification", () => {
           // Vérification pour chaque produit
           response.body.forEach((product) => {
             expect(product).to.include.all.keys(REQUIRED_FIELDS);
-
-            // Validation des types de données
             expect(product.id).to.be.a("number");
             expect(product.name).to.be.a("string");
             expect(product.availableStock).to.be.a("number");

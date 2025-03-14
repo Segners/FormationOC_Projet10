@@ -75,10 +75,9 @@ describe("Tests inscription", () => {
 
   // Test de récupération du profil
   describe("GET /me", () => {
-    let authToken; // Déclaration au niveau approprié
+    let authToken;
 
     before(() => {
-      // Retourner la chaîne de commandes Cypress
       cy.request({
           method: "POST",
           url: `/login`,
